@@ -6,7 +6,8 @@ import {
 
 const INITIAL_STATE = {
     headerLinks: [],
-    navbarLinks: []
+    navbarLinks: [],
+    onClick: ''
 }
 
 export default function(state = INITIAL_STATE, action) {
@@ -17,9 +18,11 @@ export default function(state = INITIAL_STATE, action) {
                 headerLinks: action.payload
             }
         case SET_NAVBAR_LINKS:
+        const { links, onClick } = action.payload; 
             return {
                 ...state,
-                navbarLinks: action.payload
+                navbarLinks: links,
+                onClick: onClick
             }
         case CHANGE_NAVBAR_ACTIVE: 
             const navbarLinks = state.navbarLinks.map(link => {
