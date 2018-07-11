@@ -29,7 +29,7 @@ class Shop extends Component {
     }
 
     onSubmit = (fields) => {
-        console.log(fields);
+        this.props.filterProductsWithQuery(fields)
     }
 
     render() {
