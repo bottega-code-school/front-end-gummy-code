@@ -61,6 +61,7 @@
         grid-row: products-s/products-e;
         display: grid;
         overflow-y: scroll;
+        grid-row-gap: 45px;
     }
     &__footer {
         grid-column: footer-s/footer-e;
